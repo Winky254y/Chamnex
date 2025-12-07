@@ -1,0 +1,76 @@
+:root{
+  --bg: #071629;
+  --nav:#07233a;
+  --card:#071826;
+  --accent:#ff9b1a;
+  --accent-2:#18c37b;
+  --muted:#9fb0c4;
+  --glass:rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+body,html,#root{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
+body{background:linear-gradient(180deg,#07111a 0%, #071826 60%); color:#e6eef8}
+.app-root{display:flex;flex-direction:column;min-height:100vh}
+
+/* Header */
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:var(--nav);color:#fff;position:sticky;top:0;z-index:50}
+.site-header--navy .logo-img{height:42px}
+.nav{display:flex;gap:16px;align-items:center}
+.nav a{color:rgba(255,255,255,0.85);text-decoration:none}
+.nav .cta{background:var(--accent);color:#07111a;padding:10px 14px;border-radius:8px;font-weight:700}
+.hamburger{background:transparent;border:0;color:#fff;font-size:20px;padding:6px 10px;border-radius:8px}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr;gap:24px;padding:56px 20px;align-items:center;position:relative}
+.hero--with-bg{background-image:url('/src/assets/hero-bg.svg');background-size:cover;background-position:center;color:#fff}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,12,24,0.55),rgba(3,12,24,0.8));pointer-events:none}
+.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:24px;position:relative;z-index:2}
+.kicker{display:inline-block;background:rgba(255,155,26,0.12);color:var(--accent);padding:6px 12px;border-radius:20px;font-weight:700;margin-bottom:12px}
+.hero h1{font-size:2.4rem;margin:0;line-height:1.02}
+.hero .accent{color:var(--accent);font-weight:800}
+.hero-sub{color:var(--muted);margin-top:8px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
+.btn{padding:14px 20px;border-radius:10px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+.btn-whatsapp{background:var(--accent-2);color:#04271b}
+.btn-call{background:var(--accent);color:#07111a}
+.hero-aside{display:none}
+.why-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px}
+
+/* services */
+.services{padding:30px 20px}
+.services-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:18px;max-width:1100px;margin:0 auto}
+.service-card{background:#fff;padding:18px;border-radius:16px;border:1px solid rgba(0,0,0,0.04);box-shadow:0 8px 20px rgba(2,8,14,0.25);color:#072033}
+.service-card h3{margin:0 0 8px 0;color:#072033}
+.service-card p{color:#567287}
+
+/* portfolio */
+.tag-btn{border-radius:999px;padding:10px 16px;border:0;background:rgba(255,255,255,0.06);color:var(--muted);font-weight:700}
+.tag-btn.active{background:var(--accent);color:#07111a}
+.portfolio-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:16px;margin-top:18px}
+.portfolio-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(2,8,14,0.25)}
+.portfolio-img{height:180px;background-size:cover;background-position:center}
+.portfolio-tag{display:inline-block;background:var(--accent);color:#07111a;padding:6px 10px;border-radius:999px;font-weight:700}
+
+/* Areas */
+/* handled inline for contrast */
+
+/* Contact */
+.contact{padding:28px 20px}
+.contact-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:12px}
+.contact .panel{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px}
+
+/* footer */
+.site-footer{margin-top:auto;padding:28px 20px;text-align:center;color:var(--muted);background:linear-gradient(180deg, rgba(7,18,34,0.9), rgba(7,18,34,0.95))}
+
+/* Responsive */
+@media(min-width:768px){
+  .hero{padding:80px 20px}
+  .hero-inner{grid-template-columns:1fr 420px;gap:40px}
+  .hero-aside{display:block}
+  .services-grid{grid-template-columns:repeat(3,1fr)}
+  .portfolio-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr 420px}
+}
+@media(min-width:1100px){
+  .portfolio-grid{grid-template-columns:repeat(3,1fr)}
+}
