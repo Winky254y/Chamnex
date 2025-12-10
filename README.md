@@ -1,33 +1,98 @@
 # ChamNex Electrical Installation Services
 
-This repository contains a small React (Vite) website scaffold for ChamNex Electrical Installation Services — a colourful, responsive marketing site you can host on Vercel.
+Professional electrical installation and solar panel services website for ChamNex in Nairobi, Kenya.
 
-Local development:
+## 🌐 Live Website
+**👉 https://chamnex.vercel.app**
 
+## ✨ Features
+- ⚡ Fast, responsive React + Vite application
+- 🎨 Modern UI with smooth animations and parallax effects
+- 📱 Fully responsive design (mobile, tablet, desktop)
+- 🚀 Optimized performance
+- ✅ SEO-friendly structure
+
+## 🔧 Services Offered
+- Solar Panel Installation
+- Interior & Exterior Lighting
+- Meter Board Repairs & Upgrades
+- Full Electrical Installations
+- Fault Tracing & Repairs
+- Maintenance Contracts
+
+## 📍 Service Areas
+- Nairobi
+- Machakos
+- Kajiado
+- Kiambu
+- Thika
+
+## 📞 Contact Information
+- **Phone**: 0722 905 171
+- **WhatsApp**: https://wa.me/254722905171
+- **Location**: Mwiki, Kasarani, Nairobi
+
+## 💻 Tech Stack
+- **Frontend**: React 18
+- **Build Tool**: Vite
+- **Styling**: CSS3 with animations & parallax
+- **Hosting**: Vercel
+- **Version Control**: Git + GitHub
+
+## 🚀 Quick Start
+
+### Local Development
 ```bash
+# Install dependencies
 npm install
+
+# Start development server
 npm run dev
 ```
 
-Build and preview:
-
+### Production Build
 ```bash
+# Build for production
 npm run build
+
+# Preview production build
 npm run preview
 ```
 
-Deploy to Vercel:
+## 📦 Deployment to Vercel
 
-1. Push this repository to GitHub (or another Git provider).
-2. In Vercel, click "Import Project" and connect the repository.
-3. Vercel should detect the framework (Vite). If not, set the Build Command to `npm run build` and the Output Directory to `dist`.
-4. Deploy — the site will be live on a Vercel subdomain.
+### Automatic Deployment
+This project is configured for automatic deployment on Vercel. Every push to the main branch automatically triggers a new deployment.
 
-Notes & next steps I can help with:
+### Manual Deployment Steps
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run: `vercel`
+3. Follow the prompts to connect your GitHub account
+4. Select this project and deploy
 
-- Add your logo and photo assets (I can place them under `src/assets`).
-- Connect a proper contact form (Formspree or a serverless endpoint).
-- Configure environment variables or analytics for the production site.
+**Live URL**: https://chamnex.vercel.app
 
-If you want, I can also deploy this site to your Vercel account directly — tell me whether you have granted Vercel access to this repository or prefer to do the final import yourself.
-# Chamnex
+## 📊 Recent Updates
+- ✅ Added smooth animations and parallax effects
+- ✅ Enhanced mobile responsiveness with 6 breakpoints
+- ✅ Optimized performance and accessibility
+- ✅ Configured for Vercel deployment
+- ✅ Updated with modern UI/UX
+
+## 📝 Project Structure
+```
+├── src/
+│   ├── components/      # React components
+│   ├── assets/          # Images and icons
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css        # Global styles with animations
+├── dist/                # Production build output
+├── index.html
+├── package.json
+└── vercel.json          # Vercel configuration
+```
+
+---
+
+© 2025 ChamNex Electrical Installation Services. All rights reserved.
