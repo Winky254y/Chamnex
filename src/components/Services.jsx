@@ -19,7 +19,7 @@ export default function Services(){
           {items.map((s,idx)=> (
             <div key={idx} className="service-card">
               <div style={{display:'flex',gap:12,alignItems:'center'}}>
-                <div style={{width:56,height:56,borderRadius:12,background:'linear-gradient(135deg,var(--accent),rgba(255,155,26,0.8))',display:'flex',alignItems:'center',justifyContent:'center',color:'#07111a',fontWeight:800}}>⚡</div>
+                <div style={{width:56,height:56,borderRadius:12,background:'linear-gradient(135deg,var(--accent),rgba(255,155,26,0.8))',display:'flex',alignItems:'center',justifyContent:'center',color:'#07111a',fontWeight:800,fontSize:24}}>⚡</div>
                 <div style={{flex:1}}>
                   <h3>{s.title}</h3>
                   <p style={{color:'#567287'}}>{s.desc}</p>

@@ -14,7 +14,7 @@ export default function Hero(){
           </div>
         </div>
         <aside className="hero-aside">
-          <div className="why-card">
+          <div className="why-card animate-float">
             <h3>Reliable · Affordable · Professional</h3>
             <p style={{color:'var(--muted)',marginTop:8}}>Get a FREE site visit and quotation when you contact us today!</p>
           </div>

@@ -9,11 +9,11 @@ const sample = [
 
 export default function Portfolio(){
   return (
-    <section style={{padding:'28px 24px'}}>
+    <section className="portfolio-section" style={{padding:'28px 24px'}}>
       <div style={{maxWidth:1100,margin:'0 auto'}}>
         <h2 style={{textAlign:'center'}}>Our Work</h2>
         <p style={{textAlign:'center',color:'var(--muted)'}}>See the quality of our installations and repairs across Kenya</p>
-        <div style={{display:'flex',gap:12,justifyContent:'center',marginTop:16}}>
+        <div style={{display:'flex',gap:12,justifyContent:'center',marginTop:16,flexWrap:'wrap'}}>
           <button className="tag-btn active">All</button>
           <button className="tag-btn">Solar</button>
           <button className="tag-btn">Lighting</button>
