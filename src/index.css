@@ -6,9 +6,15 @@
   --accent-2:#18c37b;
   --muted:#9fb0c4;
   --glass:rgba(255,255,255,0.03);
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-h1: 2.4rem;
+  --font-size-h2: 1.8rem;
+  --font-size-h3: 1.2rem;
 }
 *{box-sizing:border-box}
-body,html,#root{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
+html{font-size:16px;scroll-behavior:smooth}
+body,html,#root{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;line-height:1.6}
 body{background:linear-gradient(180deg,#07111a 0%, #071826 60%); color:#e6eef8}
 
 /* Animations */
@@ -107,42 +113,44 @@ body{background:linear-gradient(180deg,#07111a 0%, #071826 60%); color:#e6eef8}
 .app-root{display:flex;flex-direction:column;min-height:100vh;overflow-x:hidden}
 
 /* Header */
-.site-header{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:var(--nav);color:#fff;position:sticky;top:0;z-index:50;animation:fadeIn 0.6s ease-out}
-.site-header--navy .logo-img{height:42px}
-.nav{display:flex;gap:16px;align-items:center}
-.nav a{color:rgba(255,255,255,0.85);text-decoration:none;transition:color 0.3s ease}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:var(--nav);color:#fff;position:sticky;top:0;z-index:50;animation:fadeIn 0.6s ease-out;gap:8px}
+.site-header--navy .logo-img{height:36px;width:auto}
+.brand{flex-shrink:0}
+.nav{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end;flex:1}
+.nav a{color:rgba(255,255,255,0.85);text-decoration:none;transition:color 0.3s ease;font-size:14px;white-space:nowrap}
 .nav a:hover{color:var(--accent)}
-.nav .cta{background:var(--accent);color:#07111a;padding:10px 14px;border-radius:8px;font-weight:700;transition:all 0.3s ease;cursor:pointer}
+.nav .cta{background:var(--accent);color:#07111a;padding:8px 12px;border-radius:8px;font-weight:700;transition:all 0.3s ease;cursor:pointer;font-size:13px}
 .nav .cta:hover{transform:translateY(-2px);box-shadow:0 8px 16px rgba(255,155,26,0.3)}
-.hamburger{background:transparent;border:0;color:#fff;font-size:20px;padding:6px 10px;border-radius:8px;cursor:pointer;transition:all 0.3s ease}
+.hamburger{background:transparent;border:0;color:#fff;font-size:18px;padding:6px 10px;border-radius:8px;cursor:pointer;transition:all 0.3s ease;flex-shrink:0}
 .hamburger:hover{background:rgba(255,155,26,0.1)}
 
 /* Hero */
-.hero{display:grid;grid-template-columns:1fr;gap:24px;padding:56px 20px;align-items:center;position:relative;overflow:hidden}
+.hero{display:grid;grid-template-columns:1fr;gap:16px;padding:32px 16px;align-items:center;position:relative;overflow:hidden;min-height:auto}
 .hero--with-bg{background-image:url('/src/assets/hero-bg.svg');background-size:cover;background-position:center;background-attachment:fixed;color:#fff}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,12,24,0.55),rgba(3,12,24,0.8));pointer-events:none}
-.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:24px;position:relative;z-index:2}
+.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:16px;position:relative;z-index:2;width:100%;padding:0 8px}
 .hero-inner > div:first-child{animation:slideInLeft 0.8s ease-out}
-.kicker{display:inline-block;background:rgba(255,155,26,0.12);color:var(--accent);padding:6px 12px;border-radius:20px;font-weight:700;margin-bottom:12px;animation:fadeIn 0.6s ease-out 0.1s backwards}
-.hero h1{font-size:2.4rem;margin:0;line-height:1.02;animation:fadeInUp 0.8s ease-out 0.2s backwards}
+.kicker{display:inline-block;background:rgba(255,155,26,0.12);color:var(--accent);padding:5px 10px;border-radius:20px;font-weight:700;margin-bottom:10px;animation:fadeIn 0.6s ease-out 0.1s backwards;font-size:12px}
+.hero h1{font-size:clamp(1.5rem, 5vw, 2.4rem);margin:0;line-height:1.1;animation:fadeInUp 0.8s ease-out 0.2s backwards}
 .hero .accent{color:var(--accent);font-weight:800}
-.hero-sub{color:var(--muted);margin-top:8px;animation:fadeInUp 0.8s ease-out 0.3s backwards}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px;animation:fadeInUp 0.8s ease-out 0.4s backwards}
-.btn{padding:14px 20px;border-radius:10px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:all 0.3s ease;border:none;cursor:pointer}
+.hero-sub{color:var(--muted);margin-top:6px;animation:fadeInUp 0.8s ease-out 0.3s backwards;font-size:clamp(14px, 2vw, 16px)}
+.hero-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;animation:fadeInUp 0.8s ease-out 0.4s backwards}
+.btn{padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:all 0.3s ease;border:none;cursor:pointer;font-size:clamp(12px, 2vw, 14px);white-space:nowrap}
 .btn:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(0,0,0,0.3)}
+.btn:active{transform:translateY(-1px)}
 .btn-whatsapp{background:var(--accent-2);color:#04271b}
 .btn-whatsapp:hover{background:#1ad186}
 .btn-call{background:var(--accent);color:#07111a}
 .btn-call:hover{background:#ffaa33}
 .hero-aside{display:none}
-.why-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px;animation:slideInRight 0.8s ease-out;border:1px solid rgba(255,155,26,0.2)}
+.why-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:12px;animation:slideInRight 0.8s ease-out;border:1px solid rgba(255,155,26,0.2);font-size:14px}
 
 /* services */
-.services{padding:30px 20px}
-.services h2{animation:fadeInUp 0.8s ease-out}
-.services > div > p{animation:fadeInUp 0.8s ease-out 0.1s backwards}
-.services-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:18px;max-width:1100px;margin:0 auto}
-.service-card{background:#fff;padding:18px;border-radius:16px;border:1px solid rgba(0,0,0,0.04);box-shadow:0 8px 20px rgba(2,8,14,0.25);color:#072033;transition:all 0.4s ease;animation:fadeInUp 0.8s ease-out backwards}
+.services{padding:24px 16px}
+.services h2{animation:fadeInUp 0.8s ease-out;font-size:clamp(1.5rem, 5vw, 2rem)}
+.services > div > p{animation:fadeInUp 0.8s ease-out 0.1s backwards;font-size:clamp(14px, 2vw, 15px)}
+.services-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:12px;max-width:1100px;margin:0 auto}
+.service-card{background:#fff;padding:14px;border-radius:16px;border:1px solid rgba(0,0,0,0.04);box-shadow:0 8px 20px rgba(2,8,14,0.25);color:#072033;transition:all 0.4s ease;animation:fadeInUp 0.8s ease-out backwards}
 .service-card:nth-child(1){animation-delay:0s}
 .service-card:nth-child(2){animation-delay:0.1s}
 .service-card:nth-child(3){animation-delay:0.2s}
@@ -150,51 +158,129 @@ body{background:linear-gradient(180deg,#07111a 0%, #071826 60%); color:#e6eef8}
 .service-card:nth-child(5){animation-delay:0.4s}
 .service-card:nth-child(6){animation-delay:0.5s}
 .service-card:hover{transform:translateY(-8px);box-shadow:0 16px 40px rgba(255,155,26,0.15)}
-.service-card h3{margin:0 0 8px 0;color:#072033}
-.service-card p{color:#567287}
+.service-card h3{margin:0 0 6px 0;color:#072033;font-size:clamp(14px, 3vw, 16px)}
+.service-card p{color:#567287;font-size:13px;line-height:1.5}
 
 /* portfolio */
-.portfolio-section{animation:fadeIn 0.8s ease-out}
-.portfolio-section h2{animation:fadeInUp 0.8s ease-out}
-.portfolio-section > p{animation:fadeInUp 0.8s ease-out 0.1s backwards}
-.tag-btn{border-radius:999px;padding:10px 16px;border:0;background:rgba(255,255,255,0.06);color:var(--muted);font-weight:700;cursor:pointer;transition:all 0.3s ease}
+.portfolio-section{animation:fadeIn 0.8s ease-out;padding:20px 16px}
+.portfolio-section h2{animation:fadeInUp 0.8s ease-out;font-size:clamp(1.5rem, 5vw, 2rem)}
+.portfolio-section > p{animation:fadeInUp 0.8s ease-out 0.1s backwards;font-size:clamp(14px, 2vw, 15px)}
+.tag-btn{border-radius:999px;padding:8px 14px;border:0;background:rgba(255,255,255,0.06);color:var(--muted);font-weight:700;cursor:pointer;transition:all 0.3s ease;font-size:12px}
 .tag-btn:hover{background:var(--accent);color:#07111a}
 .tag-btn.active{background:var(--accent);color:#07111a}
-.portfolio-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:16px;margin-top:18px}
+.portfolio-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:12px;margin-top:14px}
 .portfolio-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(2,8,14,0.25);transition:all 0.4s ease;animation:fadeInUp 0.8s ease-out backwards}
 .portfolio-card:nth-child(1){animation-delay:0s}
 .portfolio-card:nth-child(2){animation-delay:0.1s}
 .portfolio-card:nth-child(3){animation-delay:0.2s}
 .portfolio-card:nth-child(4){animation-delay:0.3s}
 .portfolio-card:hover{transform:translateY(-8px);box-shadow:0 16px 40px rgba(255,155,26,0.2)}
-.portfolio-img{height:180px;background-size:cover;background-position:center;transition:transform 0.4s ease}
+.portfolio-img{height:150px;background-size:cover;background-position:center;transition:transform 0.4s ease}
 .portfolio-card:hover .portfolio-img{transform:scale(1.05)}
-.portfolio-tag{display:inline-block;background:var(--accent);color:#07111a;padding:6px 10px;border-radius:999px;font-weight:700}
+.portfolio-tag{display:inline-block;background:var(--accent);color:#07111a;padding:4px 8px;border-radius:999px;font-weight:700;font-size:11px}
 
 /* Areas */
 /* handled inline for contrast */
 
 /* Contact */
-.contact{padding:28px 20px;animation:fadeIn 0.8s ease-out}
-.contact h2{animation:fadeInUp 0.8s ease-out}
+.contact{padding:20px 16px;animation:fadeIn 0.8s ease-out}
+.contact h2{animation:fadeInUp 0.8s ease-out;font-size:clamp(1.5rem, 5vw, 2rem)}
 .contact-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:12px}
-.contact .panel{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px;animation:slideInLeft 0.8s ease-out;border:1px solid rgba(255,155,26,0.1)}
+.contact .panel{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:12px;animation:slideInLeft 0.8s ease-out;border:1px solid rgba(255,155,26,0.1);font-size:14px}
 .contact .panel:last-child{animation:slideInRight 0.8s ease-out}
-.contact input, .contact textarea{transition:all 0.3s ease}
+.contact input, .contact textarea{transition:all 0.3s ease;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;font-family:inherit;font-size:14px;width:100%}
 .contact input:focus, .contact textarea:focus{border-color:var(--accent) !important;outline:none;box-shadow:0 0 12px rgba(255,155,26,0.2)}
 
 /* footer */
-.site-footer{margin-top:auto;padding:28px 20px;text-align:center;color:var(--muted);background:linear-gradient(180deg, rgba(7,18,34,0.9), rgba(7,18,34,0.95));animation:fadeIn 0.8s ease-out}
+.site-footer{margin-top:auto;padding:20px 16px;text-align:center;color:var(--muted);background:linear-gradient(180deg, rgba(7,18,34,0.9), rgba(7,18,34,0.95));animation:fadeIn 0.8s ease-out;font-size:13px}
 
 /* Responsive */
+@media(min-width:480px){
+  .site-header{padding:12px 20px}
+  .hero{padding:40px 20px}
+  .services{padding:28px 20px}
+  .services-grid{gap:14px}
+  .service-card{padding:16px}
+  .portfolio-section{padding:24px 20px}
+  .portfolio-grid{gap:14px}
+  .portfolio-img{height:160px}
+  .contact{padding:24px 20px}
+  .site-footer{padding:24px 20px}
+}
+
+@media(min-width:640px){
+  html{font-size:16px}
+  .hero{padding:48px 24px}
+  .hero-inner{gap:20px;padding:0}
+  .hero h1{font-size:clamp(1.8rem, 5vw, 2.2rem)}
+  .services{padding:32px 24px}
+  .services-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+  .services h2{font-size:clamp(1.6rem, 5vw, 1.9rem)}
+  .portfolio-section{padding:28px 24px}
+  .portfolio-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .portfolio-section h2{font-size:clamp(1.6rem, 5vw, 1.9rem)}
+  .contact{padding:28px 24px}
+  .contact-grid{grid-template-columns:1fr}
+  .contact h2{font-size:clamp(1.6rem, 5vw, 1.9rem)}
+  .site-footer{padding:28px 24px;font-size:14px}
+}
+
 @media(min-width:768px){
-  .hero{padding:80px 20px}
-  .hero-inner{grid-template-columns:1fr 420px;gap:40px}
+  .hero{padding:64px 24px}
+  .hero-inner{grid-template-columns:1fr 380px;gap:32px;padding:0}
   .hero-aside{display:block}
+  .hero h1{font-size:2rem}
+  .services-grid{grid-template-columns:repeat(3,1fr);gap:18px}
+  .services h2{font-size:2rem}
+  .service-card{padding:18px}
+  .portfolio-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+  .portfolio-section h2{font-size:2rem}
+  .portfolio-img{height:180px}
+  .contact-grid{grid-template-columns:1fr 340px;gap:16px}
+  .contact h2{font-size:2rem}
+  .contact .panel{padding:18px}
+  .site-footer{padding:32px 24px}
+}
+
+@media(min-width:1024px){
+  .hero{padding:80px 32px}
+  .hero-inner{gap:40px}
+  .hero h1{font-size:clamp(2rem, 5vw, 2.6rem)}
+  .services-grid{gap:20px}
+  .portfolio-grid{gap:18px}
+  .contact-grid{grid-template-columns:1fr 420px;gap:20px}
+}
+
+@media(min-width:1200px){
+  .hero{padding:100px 40px}
+  .hero-inner{grid-template-columns:1fr 420px}
+  .hero h1{font-size:2.4rem}
   .services-grid{grid-template-columns:repeat(3,1fr)}
-  .portfolio-grid{grid-template-columns:repeat(2,1fr)}
+  .portfolio-grid{grid-template-columns:repeat(3,1fr)}
   .contact-grid{grid-template-columns:1fr 420px}
 }
-@media(min-width:1100px){
-  .portfolio-grid{grid-template-columns:repeat(3,1fr)}
+
+/* Mobile optimization */
+@media(max-width:479px){
+  .nav a{display:none}
+  .nav .cta{display:none}
+  .hamburger{display:block}
+  .hero-cta{flex-direction:column}
+  .btn{width:100%;justify-content:center}
+}
+
+/* Landscape mode optimization */
+@media(max-height:600px) and (orientation:landscape){
+  .hero{padding:20px 16px;min-height:auto}
+  .hero h1{font-size:1.6rem;margin-bottom:4px}
+  .hero-sub{margin-top:4px}
+  .hero-cta{margin-top:10px}
+  .btn{padding:8px 12px;font-size:12px}
+}
+
+/* Touch device optimization */
+@media(hover:none) and (pointer:coarse){
+  .btn:active{transform:translateY(-2px);opacity:0.9}
+  .service-card:active{transform:translateY(-4px)}
+  .portfolio-card:active{transform:translateY(-4px)}
 }

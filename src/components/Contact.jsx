@@ -12,7 +12,7 @@ export default function Contact(){
 
   return (
     <section id="contact" className="contact">
-      <div className="contact-grid">
+      <div className="contact-grid" style={{maxWidth:900,margin:'0 auto',width:'100%'}}>
         <div className="panel">
           <h2>Contact Us</h2>
           <p style={{color:'var(--muted)'}}>Main office: Mwiki, Kasarani — We serve Nairobi & nearby counties.</p>
@@ -24,11 +24,11 @@ export default function Contact(){
           <h3>Quick Enquiry</h3>
           <form onSubmit={handleSubmit}>
             <div style={{display:'grid',gap:8}}>
-              <input placeholder="Your name" style={{padding:10,borderRadius:8,border:'1px solid rgba(255,255,255,0.04)',background:'transparent',color:'inherit',fontFamily:'inherit'}} required />
-              <input placeholder="Phone or WhatsApp" style={{padding:10,borderRadius:8,border:'1px solid rgba(255,255,255,0.04)',background:'transparent',color:'inherit',fontFamily:'inherit'}} required />
-              <textarea placeholder="Project details or message" rows={4} style={{padding:10,borderRadius:8,border:'1px solid rgba(255,255,255,0.04)',background:'transparent',color:'inherit',fontFamily:'inherit',resize:'none'}} />
+              <input placeholder="Your name" style={{}} required />
+              <input placeholder="Phone or WhatsApp" style={{}} required />
+              <textarea placeholder="Project details or message" rows={4} style={{resize:'none'}} />
               <button className="btn btn-call" type="submit">Request Free Visit</button>
-              {submitted && <div style={{padding:10,background:'rgba(24, 195, 123, 0.2)',color:'var(--accent-2)',borderRadius:8,textAlign:'center',fontWeight:700,animation:'fadeIn 0.3s ease'}}>✓ Thanks! We'll contact you shortly.</div>}
+              {submitted && <div style={{padding:10,background:'rgba(24, 195, 123, 0.2)',color:'var(--accent-2)',borderRadius:8,textAlign:'center',fontWeight:700,animation:'fadeIn 0.3s ease',fontSize:'14px'}}>✓ Thanks! We'll contact you shortly.</div>}
             </div>
           </form>
         </div>

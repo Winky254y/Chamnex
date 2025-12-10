@@ -12,15 +12,15 @@ const items = [
 export default function Services(){
   return (
     <section id="services" className="services">
-      <div style={{maxWidth:1100,margin:'0 auto'}}>
+      <div style={{maxWidth:1100,margin:'0 auto',width:'100%'}}>
         <h2>What We Offer</h2>
         <p style={{color:'var(--muted)'}}>From solar installations to complete electrical works – you name it, we fix it!</p>
-        <div className="services-grid" style={{marginTop:18}}>
+        <div className="services-grid" style={{marginTop:16}}>
           {items.map((s,idx)=> (
             <div key={idx} className="service-card">
-              <div style={{display:'flex',gap:12,alignItems:'center'}}>
-                <div style={{width:56,height:56,borderRadius:12,background:'linear-gradient(135deg,var(--accent),rgba(255,155,26,0.8))',display:'flex',alignItems:'center',justifyContent:'center',color:'#07111a',fontWeight:800,fontSize:24}}>⚡</div>
-                <div style={{flex:1}}>
+              <div style={{display:'flex',gap:12,alignItems:'flex-start'}}>
+                <div style={{width:48,height:48,minWidth:48,borderRadius:12,background:'linear-gradient(135deg,var(--accent),rgba(255,155,26,0.8))',display:'flex',alignItems:'center',justifyContent:'center',color:'#07111a',fontWeight:800,fontSize:20}}>⚡</div>
+                <div style={{flex:1,minWidth:0}}>
                   <h3>{s.title}</h3>
                   <p style={{color:'#567287'}}>{s.desc}</p>
                 </div>
